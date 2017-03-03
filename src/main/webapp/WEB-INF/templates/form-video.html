@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <title>Association Saturne</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css"> 
+        <link rel="stylesheet" type="text/css" href="../css/css_administration-formulaireajout.css"/>
+        <!-- Pas utile
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    </head>
+
+    <body>
+    
+        <div th:replace="~{common :: menu('envoyervideo')}"></div>
+
+        <div class="container">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-2"><span class="glyphicon glyphicon-send"></span></div>
+                    <div class="col-xs-8">Envoyer vidéo</div>
+                </div>
+                </div>
+            </div>
+
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                          <label for="evenementvideo">Evènement de la vidéo :</label>
+                          <select class="form-control" name="categorie" id="evenementvideo" required>
+                            <option>Afterwork Saturne</option>
+                            <option>Soirée BPM</option>
+                            <option>Remise des diplômes</option>
+                            <option>Raid HEI</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="titrevideo">Titre de la vidéo :</label>
+                          <input  class="form-control" type="text" name="titre" id="titrevideo" placeholder="Ex: Vidéo Aftework Saturne" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="filebutton">Sélectionner un fichier :</label>
+                            <input id="filebutton" name="filebutton" class="input-file" type="file">
+                        </div>
+                        <div class="form-group">
+                          <label for="descriptionVideo">Description de la vidéo :</label>                    
+                            <textarea class="form-control" id="descriptionVideo" name="descriptionVideo"></textarea>
+                        </div>
+                        
+                        <div class="row" id="footerform">
+                          <input type="submit" class="btn btn-success" value="Envoyer la vidéo">
+                        </div>
+                    </form>
+             
+            </div>
+
+        </div>
+        
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+   		<title>Fragments Admin</title>
+   		<meta charset="utf-8">
+	</head>
+
+	<body>
+	
+	<div class="navbar navbar-inverse navbar-static-top" th:fragment="adminMenu(selectedAdminMenu)">
+			<div class="container">
+        <div class="navbar-header">
+
+        	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" >
+            	<span class="sr-only">Toggle navigation</span>
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+        	</button> 
+
+        	<a class="navbar-brand" href="admingestionsite">Administration Saturne HEI</a>
+
+        </div>
+
+        <div class="navbar-collapse collapse" >
+        	<ul class="nav navbar-nav navbar-right">
+        		<li th:class="${selectedAdminMenu == 'admingestionsite'} ? 'active'"><a href="admingestionsite"><span class="glyphicon glyphicon-globe"></span> Paramétrage site</a></li>
+            	<li th:class="${selectedAdminMenu == 'admingestionvideos'} ? 'active'"><a href="admingestionvideos"><span class="glyphicon glyphicon-film"></span> Gestion Vidéos</a></li>
+            	<li th:class="${selectedAdminMenu == 'admingestionevenements'} ? 'active'"><a href="admingestionevenements"><span class="glyphicon glyphicon-th"></span> Gestion Evènements</a></li>
+            	<li th:class="${selectedAdminMenu == 'admingestioncategories'} ? 'active'"><a href="admingestioncategories"><span class="glyphicon glyphicon-list"></span> Catégorie</a></li>
+            	<li th:class="${selectedAdminMenu == 'adminparametrescompte'} ? 'active'" class="dropdown">
+              		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              		<span class="glyphicon glyphicon-user"></span> Compte</a>
+                		<ul class="dropdown-menu">
+                  			<li><a href="adminparametrescompte">Paramètres</a></li>
+                  			<li><a href="deconnexion">Déconnexion</a></li>
+                		</ul>
+            	</li>            
+        	</ul>
+        </div>
+
+        </div>
+    	</div>	
+    	
+    	
+
+                    <div class="menu-list" th:fragment="adminLeftMenu(selectedAdminLeftMenu)">
+
+                        <ul id="menu-content" class="menu-content collapse out">
+                            <li th:class="${selectedAdminLeftMenu == 'admingestionsiteaccueil'} ? 'active'">
+                              <a href="admingestionsiteaccueil">
+                                  <i class="glyphicon glyphicon-home"></i> Acceuil
+                              </a>
+                          </li>
+                          <li th:class="${selectedAdminLeftMenu == 'admingestionsiteconsulterevenements'} ? 'active'">
+                              <a href="admingestionsiteconsulterevenements">
+                                  <i class="glyphicon glyphicon-glass"></i> Consulter les événements
+                              </a>
+                          </li>
+                          <li th:class="${selectedAdminLeftMenu == 'admingestionsiteformulaireinscription'} ? 'active'">
+                              <a href="admingestionsiteformulaireinscription">
+                                  <i class="glyphicon glyphicon-list-alt"></i> Formulaire inscription
+                              </a>
+                          </li>
+                          <li th:class="${selectedAdminLeftMenu == 'admingestionsiteformulairevideo'} ? 'active'">
+                              <a href="admingestionsiteformulairevideo">
+                                  <i class="glyphicon glyphicon-open-file"></i> Formulaire d'ajout de vidéos
+                              </a>
+                          </li>
+                          <li th:class="${selectedAdminLeftMenu == 'admingestionsiteconnexion'} ? 'active'">
+                              <a href="admingestionsiteconnexion">
+                                  <i class="glyphicon glyphicon-user"></i> Connexion
+                              </a>
+                          </li>
+                        </ul>
+                </div>
+            </div>
+    	
+    	
+	
+	</body>
+</html>

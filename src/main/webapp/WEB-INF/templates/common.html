@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+   		<title>Fragments</title>
+   		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<div class="navbar navbar-default navbar-static-top" th:fragment="menu(selectedMenu)">
+			<div class="container">
+        		<div class="navbar-header">
+		        	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" >
+        		    	<span class="sr-only">Toggle navigation</span>
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+        			</button> 
+		        	<a class="navbar-brand" href="accueil">Saturne HEI</a>
+		        </div>
+
+        		<div class="navbar-collapse collapse">
+        			<ul class="nav navbar-nav navbar-right">
+            			<li th:class="${selectedMenu == 'accueil'} ? 'active'"><a href="accueil"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+            			<li th:class="${selectedMenu == 'consultervideo'} ? 'active'"><a href="consultervideo"><span class="glyphicon glyphicon-film"></span> Vidéos</a></li>
+            			<li th:class="${selectedMenu == 'consulterevenement'} ? 'active'"><a href="consulterevenement"><span class="glyphicon glyphicon-th"></span> Evènements</a></li>
+            			<li th:class="${selectedMenu == 'envoyervideo'} ? 'active'"><a href="envoyervideo"><span class="glyphicon glyphicon-send"></span> Envoyer vidéo</a></li>
+            			<li th:class="${selectedMenu == 'parametrescompte'} ? 'active'" class="dropdown">
+              				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              				<span class="glyphicon glyphicon-user"></span> Compte</a>
+                			<ul class="dropdown-menu">
+                  				<li><a href="parametrescompte">Paramètres</a></li>
+                  				<li><a href="deconnexion">Déconnexion</a></li>
+                			</ul>
+            			</li>            
+        			</ul>
+        		</div>
+    		</div>
+    	</div>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
+    	<title>Association Saturne</title>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="css/css_authentification.css">
+    	<!-- Pas utile
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+	</head>
+
+	<body>
+        <img id="bg" src="img/accueil.png">
+
+    <div class="container">
+        <div class="col-md-6">
+        <img id="logo" src="img/icon-saturne.png">
+        </div>
+
+        <div class="col-md-6">
+            <form class="form-signin" action="ajouterEtudiant" method="Post">
+                <label for="emailEtudiant"></label>
+                    <input type="email" name="email" id="emailEtudiant" class="form-control" placeholder="Adresse mail HEI" maxlength="70" required="@hei.yncrea.fr" autofocus/>
+                <label for="passwordEtudiant" class="sr-only"></label>
+                    <input type="password" name="password" id="passewordEtudiant" class="form-control" placeholder="Mot de passe" required/>
+                <input type="submit" class="btn btn-lg btn-primary btn-block" value="Inscription">
+            </form>
+            <br>
+            <a class="btn btn-danger" href="authentification">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Annuler
+            </a>
+        </div>   
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

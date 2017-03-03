@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <title>Association Saturne</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/style.css"> 
+        <link rel="stylesheet" media="screen, print, handheld" type="text/css" href="../css/calendrier.css"/>
+        <script type="text/javascript" src="../js/calendrier.js"></script>
+
+        
+        <!-- Pas utile
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    </head>
+
+    <body>
+    
+        <div th:replace="~{common :: menu('consulterevenement')}"></div>
+
+        <div class="container">
+
+        <div class="panel panel-default">
+        <div class="panel-heading">
+         <div class="row">
+            <div class="col-xs-1"><span class="glyphicon glyphicon-th" style="font-size:80%"></span></div>
+            <div class="col-xs-2"></div>
+            <div class="col-xs-5">Evènements</div>
+        </div>
+         </div>
+        </div>
+         <script type="text/javascript">
+                    calendrier();
+         </script>
+         <div class="panel panel-default" th:each="evenement  : ${evenements}">
+            <div class="panel-heading">
+                <h3 class="panel-title" th:text="${{evenement.titleEvenement}}"></h3>  <!--  Pourquoi 2 {{}} ?  -->
+            </div>
+            <div class="panel-body">
+              <img src="../img/image-soiree.jpeg">
+              <span class="date"> Evènement le : [[${#temporals.format(evenement.heuredebutEvenement,'dd/MM/yyyy')}]]</span>
+              <!--  <p th:text="${#dates.format(evenement.heuredebutEvenement,'dd-MMM-yyyy')}"></p>-->
+            </div>
+        </div>
+             
+           
+        </div>
+        </div>
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+
+.panel-heading,.panel-footer{
+	text-align:center;
+	font-size:2em;
+	font-weight: bold;
+}
+
+.col-sx-1 span {
+	font-size:80%;
+}
+.modal-header,.modal-footer, tr th{
+	text-align: center;
+}

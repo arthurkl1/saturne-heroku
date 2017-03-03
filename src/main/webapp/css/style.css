@@ -1,0 +1,25 @@
+.thumbnail .caption, .thumbnail h3,.featurette-heading{
+	text-align: center;
+}
+
+#carousel{
+	margin-bottom: 20px;
+}
+
+#imgaccueil{
+	width: 100%; 
+}
+
+.panel-heading{
+	text-align:center;
+	font-size:2em;
+	font-weight: bold;
+}
+
+.col-sx-1 span {
+	font-size:80%;
+}
+
+
+
+

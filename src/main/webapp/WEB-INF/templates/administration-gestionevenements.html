@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    	<title>Association Saturne</title>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="../css/css_administration-gestionevenements.css"> 
+
+    </head><body>
+    
+    	<div th:replace="~{commonAdmin :: adminMenu('admingestionevenements')}"></div>
+
+        <div class="container">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-2"><span class="glyphicon glyphicon-th"></span></div>
+                    <div class="col-xs-8">Gestion Evènements</div>
+                    
+                </div>
+                </div>
+            </div>
+            
+            
+            <section class="panel-group">
+				<h2>Ajouter un évènement :</h2>
+            
+
+            <form class="form-horizontal" role="form" method="post" action="addEvenement">
+                <div class="form-group">
+                    <label for="titreEvenement" class="col-sm-4 control-label">Titre de l'évènement:</label>
+                    <div class="col-sm-6">
+                    	<input  class="form-control" type="text" name="titre" id="titreEvenement">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lieuEvenement" class="col-sm-4 control-label">Lieu de l'évènement:</label>
+                    <div class="col-sm-6">
+                    <input  class="form-control" type="text" name="lieu" id="lieuEvenement">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="categorieEvenement" class="col-sm-4 control-label">Catégorie de l'évènement:</label>
+                    <div class="col-sm-6">
+                    	<select class="form-control" name="categorie" id="categorieEvenement" required/>
+                        	<option th:each="categorie : ${categories}" th:value="${categorie.id}">[[${categorie.nom}]]</option>
+
+                    	</select>
+                	</div>
+                </div>
+                <div class="form-group">
+                    <label for="dateDebutEvenement" class="col-sm-4 control-label">Date de l'évènement :</label>
+                    <div class="col-sm-6">
+                    <input class="form-control" type="date" name="date" id="dateEvenement" requierd/>
+                </div>
+                </div>          
+                <div class="form-group" id="footerform">
+                <div class="col-sm-offset-5 col-sm-2">
+                <input type="submit" class="btn btn-success" value="Ajouter la vidéo">
+                </div>
+                <div class=" col-sm-2">
+                <a class="btn btn-danger" href="administration-gestionevenements.html">Annuler</a>
+                </div>
+
+
+            </form>
+
+        </section>	
+        
+		<section class="panel-group">
+				<h2>Liste des évènements :</h2>
+
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Catégorie</th>
+                    <th>Titre</th>
+                    <th>Lieu</th>
+                    <th>Début</th>
+                    <th>Fin</th>
+                    <th>Modifier-Supprimer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                        <td align="center">BDA</td>
+                        <td align="center">Afterwork GB Radio</td>
+                        <td align="center">Attrium</td>
+                        <td align="center">18h00 22/10/2016</td>
+                        <td align="center">20h00 22/10/2016</td>
+                        <td align="center">
+                            <a class="btn btn-default" href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                            <a class="btn btn-danger" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+
+                            <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog">
+
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Souhaitez-vous vraiment supprimer cet évenement ?</h4>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success">Confirmer</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                        <td align="center">BDA</td>
+                        <td align="center">Afterwork Saturne</td>
+                        <td align="center">Berkley</td>
+                        <td align="center">19h00 05/01/2016</td>
+                        <td align="center">21h00 05/01/2016</td>
+                        <td align="center">
+                            <a class="btn btn-default" href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                            <a class="btn btn-danger" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                        </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                        <td align="center">BDS</td>
+                        <td align="center">Afterwork BDS</td>
+                        <td align="center">La faluche</td>
+                        <td align="center">20h00 17/12/2016</td>
+                        <td align="center">22h00 17/12/2016</td>
+                        <td align="center">
+                            <a class="btn btn-default" href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                            <a class="btn btn-danger" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        </section>
+
+        </div>
+
+    	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

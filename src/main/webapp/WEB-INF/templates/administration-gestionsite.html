@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    	<title>Association Saturne</title>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="../css/style.css"> 
+        <link rel="stylesheet" href="../css/css_administration-gestionsite.css"> 
+
+    </head><body>
+    
+    	<div th:replace="~{commonAdmin :: adminMenu('admingestionsite')}"></div>
+
+        <div class="container">
+             <div class="panel panel-default">
+                <div class="panel-heading">
+            		<div class="row">
+                        <div class="col-xs-2"><span class="glyphicon glyphicon-globe"></span></div>
+                        	<div class="col-xs-8" id="titreadmin">Paramétrage site</div>
+                    	</div>
+                    </div>
+                </div>
+               
+             <div class="nav-side-menu" >
+                    <div class="brand">Pages à Modifier</div>
+                    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i> 
+            <div th:replace="~{commonAdmin :: adminLeftMenu('')}"></div>  
+            </div>  
+                    
+           </div>
+            
+            
+
+    	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>
+

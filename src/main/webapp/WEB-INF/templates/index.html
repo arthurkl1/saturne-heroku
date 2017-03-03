@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    	<title>Association Saturne</title>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="../css/style.css"> 
+    	<!-- Pas utile
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+	</head>
+
+	<body>
+    
+    	<div th:replace="~{common :: menu('accueil')}"></div>
+
+    	<div class="container">
+
+    	<div class="panel panel-default">
+   		<div class="panel-heading">
+   		 <div class="row">
+    		<div class="col-xs-1"><span class="glyphicon glyphicon-home" style="font-size:80%"></span></div>
+    		<div class="col-xs-3"></div>
+    		<div class="col-xs-4">Accueil</div>
+  		</div>
+
+   		 </div>
+  		</div>
+    
+    	<div id="carousel" class="carousel slide" data-ride="carousel">
+          
+    		<ol class="carousel-indicators">
+        		<li data-target="#carousel" data-slide-to="0" class="active"></li>
+        	    <li data-target="#carousel" data-slide-to="1"></li>
+        	    <li data-target="#carousel" data-slide-to="2"></li>
+       		</ol>
+
+          
+        	<div class="carousel-inner" role="listbox">
+
+       		<div class="item active">
+        		<a href="envoyervideo"><img id="imgaccueil" src="../img/accueil-envoyervideo.jpg" alt="cameraman"></a>
+            	<div class="carousel-caption">
+           			<h3>Envoyer une vidéo</h3>
+            	</div>
+        	</div>
+
+        	<div class="item">
+            	<a href="consultervideo"><img id="imgaccueil" src="../img/accueil-consultervideos.jpg" alt="consultervideo"></a>
+            	<div class="carousel-caption">
+            		<h3>Consulter les vidéos</h3>
+            	</div>
+        	</div>
+    
+       		<div class="item">
+            	<a href="consulterevenement"><img id="imgaccueil" src="../img/accueil-consulterevenements.jpg" alt="evenement"></a>
+            	<div class="carousel-caption">
+            		<h3>Consulter les évènements</h3>
+            	</div>
+        	</div>
+  
+        	</div>
+
+
+        <!-- Left and right controls -->
+        	<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+        	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        	<span class="sr-only">Précédent</span>
+        	</a>
+
+        	<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+        	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        	<span class="sr-only">Suivant</span>
+        	</a>
+          
+    	</div>
+
+    	</div>
+
+    	<div class="container">
+    	<div class="row featurette">
+    		<div class="col-md-offset-1 col-md-6">
+    			<h2 class="featurette-heading">Association Saturne</h2>
+    			 <p class="lead">Saturne est l'asso vidéo d'HEI depuis 1991. Nous nous occupons de garder les souvenirs de tous les évènements de l'école pour te les faire revivre ! Que tu sois bon en montage, en tournage ou que tu sois créatif, n'hésite pluss et viens nous proposer tes idées ! Pour rentrer dans l'association, rien de plus simple : rejoins nous sur <a href="https://www.facebook.com/saturne.hei?fref=ts" target="blank">Facebook</a> et propose ta candidature. </p>
+    		</div>
+    		<div class="col-md-5">
+    			<img class="featurette-image img-responsive center-block" src="../img/logosaturne.PNG">
+    		</div>
+    	</div>
+    	</div>
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

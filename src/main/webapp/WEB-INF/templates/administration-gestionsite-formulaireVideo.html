@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../css/bootstrap.min.css" rel="stylesheet">
+      <title>Association Saturne</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../css/style.css"> 
+        <link rel="stylesheet" href="../css/css_administration-gestionsite.css"> 
+        
+
+    </head><body>
+    
+      
+        <div th:replace="~{commonAdmin :: adminMenu('admingestionsite')}"></div>
+
+        <div class="container">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-2"><span class="glyphicon glyphicon-globe"></span></div>
+                        <div class="col-xs-8" id="titreadmin">Paramétrage site
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-content">
+                  <div class="nav-side-menu pull-left">
+                    <div class="brand">Pages à Modifier</div>
+                    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+                    <div th:replace="~{commonAdmin :: adminLeftMenu('admingestionsiteformulairevideo')}"></div>
+                    
+                </div>
+                <div class="panel panel-primary pull-left acceuil-pannel">
+                     <div class="panel-heading">
+                        <h3 class="panel-title">Eléments de la page</h3>
+                     </div>
+                     <div class="panel-content">
+                      <h3 class="title-tab">Formulaire</h3>
+                        <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom champs</th>
+                                <th>Modifier - Supprimer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                        <td align="center">Nom de la vidéo</td>
+                        <td align="center">
+                            <a class="btn btn-default" href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                            <a class="btn btn-danger" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+
+                            <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog">
+
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Souhaitez-vous vraiment supprimer cette photo ?</h4>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success">Confirmer</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                        <td align="center">Description de la vidéo</td>
+                        <td align="center">
+                            <a class="btn btn-default" href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                            <a class="btn btn-danger" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                        </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                        <td align="center">Séléctionner la vidéo à envyer</td>
+                        <td align="center">
+                            <a class="btn btn-default" href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                            <a class="btn btn-danger" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                        </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                        <td align="center">Bouton</td>
+                        <td align="center">
+                            <a class="btn btn-default" href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                            <a class="btn btn-danger" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                        </td>
+                </tr>
+            </tbody>
+          </table>
+            <h3 class="title-tab">Types d'événements</h3>
+                        <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                <th>Nom de l'événements</th>
+                                <th>Modifier - Supprimer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                <tr>
+                        <td align="center">Troph'HEI</td>
+                        <td align="center">
+                            <a class="btn btn-default" href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                            <a class="btn btn-danger" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+
+                            <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog">
+
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Souhaitez-vous vraiment supprimer cette photo ?</h4>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success">Confirmer</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </td>
+                </tr>
+                  <tr>
+                        <td align="center">Soirée BPM</td>
+                        <td align="center">
+                            <a class="btn btn-default" href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                            <a class="btn btn-danger" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+
+                            <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog">
+
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Souhaitez-vous vraiment supprimer cette photo ?</h4>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success">Confirmer</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </td>
+                </tr>
+                  <tr>
+                        <td align="center">Remise des diplômes</td>
+                        <td align="center">
+                            <a class="btn btn-default" href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                            <a class="btn btn-danger" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+
+                            <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog">
+
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Souhaitez-vous vraiment supprimer cette photo ?</h4>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success">Confirmer</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </td>
+                </tr>
+                  <tr>
+                        <td align="center">Raid HEI</td>
+                        <td align="center">
+                            <a class="btn btn-default" href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                            <a class="btn btn-danger" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+
+                            <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog">
+
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Souhaitez-vous vraiment supprimer cette photo ?</h4>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success">Confirmer</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </td>
+                </tr>
+            </tbody>
+          </table>
+           <a class="btn btn-primary" href="administration-formulaireAjoutTypeEvenement.html">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ajouter un événement
+                        </a>
+                     </div>
+                </div>
+            </div>
+                </div>
+          </div>
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>
